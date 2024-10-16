@@ -1,0 +1,155 @@
+/* Navbar */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+.navbar {
+  font-family: Space Grotesk;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  color: white;
+  margin: 10px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 32px 16px #63f2ff1a inset;
+  background-color: #011c24;
+  border-radius: 30px;
+  position: fixed;
+  width: 95%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  margin: 0px;
+  margin-left: 15px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 25px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links li a {
+  color: cyan;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.nav-links li a:hover {
+  color: #f00;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-links.active {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #444;
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.active {
+  font-weight: bold;
+  color: #f00;
+}
+
+.login-btns {
+  display: none;
+  margin-right: 20px;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    background-color: transparent;
+    border: 0px;
+    box-shadow: 0px 0px 0px 0px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: static;
+    box-shadow: 0px 0px 32px 16px #63f2ff1a inset;
+    background-color: #011c24;
+    height: 27px;
+    padding: 20px;
+    border-radius: 30px;
+    margin-left: 350px;
+    width: 480px;
+  }
+
+  .login-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-btn {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+  .paper-btn {
+    box-shadow: 0px 0px 1px 1px #4cddfd inset;
+    background-color: #cdfcff;
+    border: 0px;
+    width: 130px;
+    height: 44px;
+    padding: 12px 24px 12px 24px;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #0b2a2d;
+    font-weight: 400;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    padding: 16px 8px;
+  }
+}
